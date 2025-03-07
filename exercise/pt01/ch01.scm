@@ -28,11 +28,19 @@
 
 ;;; Exercise 1.4
 ;; Explaination: 
-;; Because, in this model, operators are also can be the target of substitution, the form `(if (> b 0) + -)` will be substituted to `+` or `-`, making a function invocation.
+;; Because, in this model, operators are also can be the target of
+;; substitution, the form `(if (> b 0) + -)` will be substituted to
+;; `+` or `-`, making a function invocation.
 
 ;;; Exercise 1.5
 ;; Explanation:
-;; In applicative order, evaluation and substitution begin from the innermost form. Thus, for the form `(test 0 (p))`, the interpreter will try to evaluate the call to `p` first, resulting in an infinite loop. In contrast, in normal order, the interpreter attempts to substitute the call of `test` first, expanding the given expression to `(if (= 0 0) 0 (p))`. Since the condition is true, the result of the evaluation will be 0.
+;; In applicative order, evaluation and substitution begin from the
+;; innermost form. Thus, for the form `(test 0 (p))`, the interpreter
+;; will try to evaluate the call to `p` first, resulting in an infinite
+;; loop. In contrast, in normal order, the interpreter attempts to
+;; substitute the call of `test` first, expanding the given expression
+;; to `(if (= 0 0) 0 (p))`. Since the condition is true, the result of
+;; the evaluation will be 0.
 
 
 
